@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
-    <link rel="stylesheet" href="scm-player.css"> <!-- Link to SCM CSS -->
-    <script src="scm-player.js"></script> <!-- Link to SCM JS -->
+    <title>Custom Music Player</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="music-player">
-        <h1>My Music Player</h1>
-        <div id="player-controls">
-            <button onclick="SCM.play()">Play</button>
-            <button onclick="SCM.pause()">Pause</button>
-            <button onclick="SCM.next()">Next</button>
-            <button onclick="SCM.previous()">Previous</button>
-        </div>
-        <div id="playlist">
-            <h2>Playlist</h2>
-            <ul id="track-list">
-                <li onclick="SCM.play({title:'Song 1', url:'url_to_song_1.mp3'})">Song 1</li>
-                <li onclick="SCM.play({title:'Song 2', url:'url_to_song_2.mp3'})">Song 2</li>
-                <li onclick="SCM.play({title:'Song 3', url:'url_to_song_3.mp3'})">Song 3</li>
-            </ul>
+    <div class="container">
+        <h1>Custom Music Player</h1>
+        <audio id="audio" controls>
+            <source id="audio-source" src="" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <div class="controls">
+            <button onclick="playSong('song1.mp3')">Play Song 1</button>
+            <button onclick="playSong('song2.mp3')">Play Song 2</button>
+            <button onclick="playSong('song3.mp3')">Play Song 3</button>
+            <button onclick="pauseSong()">Pause</button>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
