@@ -20,6 +20,7 @@ function onPlayerReady(event) {
     // Player is ready
 }
 
-function playVideo(videoId) {
+// Make playVideo function global
+window.playVideo = function(videoId) {
     player.loadVideoById(videoId);
 }
