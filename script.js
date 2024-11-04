@@ -1,12 +1,25 @@
-function playSong(song) {
-  const audio = document.getElementById('audio');
-  const source = document.getElementById('audio-source');
-  source.src = song; // Set the source of the audio
-  audio.load(); // Load the new audio source
-  audio.play(); // Play the audio
+let player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        playerVars: {
+            autoplay: 0,
+            controls: 1,
+            showinfo: 0,
+            modestbranding: 1,
+        },
+        events: {
+            'onReady': onPlayerReady,
+        }
+    });
 }
 
-function pauseSong() {
-  const audio = document.getElementById('audio');
-  audio.pause(); // Pause the audio
+function onPlayerReady(event) {
+    // Player is ready
+}
+
+function playVideo(videoId) {
+    player.loadVideoById(videoId);
 }

@@ -3,23 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Music Player</title>
+    <title>YouTube Music Player</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Custom Music Player</h1>
-        <audio id="audio" controls>
-            <source id="audio-source" src="" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
+        <h1>YouTube Music Player</h1>
+        <div id="player"></div>
         <div class="controls">
-            <button onclick="playSong('song1.mp3')">Play Song 1</button>
-            <button onclick="playSong('song2.mp3')">Play Song 2</button>
-            <button onclick="playSong('song3.mp3')">Play Song 3</button>
-            <button onclick="pauseSong()">Pause</button>
+            <button onclick="playVideo('VIDEO_ID_1')">Play Song 1</button>
+            <button onclick="playVideo('VIDEO_ID_2')">Play Song 2</button>
+            <button onclick="playVideo('VIDEO_ID_3')">Play Song 3</button>
         </div>
     </div>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
 </body>
 </html>
